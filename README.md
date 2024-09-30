@@ -1,17 +1,18 @@
 # Laravel & ElasticSearch
 
-A Laravel-based article management application that utilizes Elasticsearch for powerful search capabilities. The system supports searchable articles using Elasticsearch in the generic way for adding a new model with real-time indexing .
+This is an application for managing articles created in Laravel and enhanced with the power of Elasticsearch. The system enables search against articles in a generic way by means of Elasticsearch around the same process of enhancing a new model with its real time indexation .
 
 ## How It Works
 
-Application Setup : The project is set up using Docker, which means all the services (like the web server, database, and Elasticsearch) run in isolated container. This allows to work in an environment that closely resembles production without needing to install all the dependencies locally .
+Application Setup: 
+The project is configured using Docker, that is how all the services like the web server, database and Elasticsearch are working in a separated container. That makes it possible to work in a setting which is as realistic without all the prerequisites being installed.
 
-Using Elasticsearch :
+Using Elasticsearch:
+Whenever a new article comes into being, it is indexed within the corresponding article. This makes it easier and faster for just about anyone to perform searches on the articles.
 
-When a new article is created, it is indexed in Elasticsearch. This allows users to search for articles quickly and efficiently.
-Whenever an article is updated, the old index is deleted, and a new one is created with the updated information.
-If an article is deleted, its index is also removed from Elasticsearch, ensuring that search results are always current.
-Real-time Indexing: Thanks to the integration with Elasticsearch, changes made to articles are reflected in real-time. This means that users can see their changes immediately when searching for articles.
+Every time an article is changed, there is no ordering of the old index but rather the old index is discarded and a new index is ordered containing only the pertinent information.
+
+Once an article is marked and subsequently deleted, its relevant index is also deleted in Elasticsearch making sure that search query will not yield stale results.
 
 
 ## Table of Contents
